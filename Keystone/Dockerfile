@@ -7,7 +7,7 @@ FROM diepnt/ubuntu14
 
 # Install keystone
 ADD script /tmp/script
-ADD keystone.conf/etc/keystone/keystone.conf
+ADD keystone.conf /etc/keystone/keystone.conf
   RUN \
   apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y  keystone python-keystoneclient rabbitmq-server supervisor && \
