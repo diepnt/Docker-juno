@@ -6,7 +6,6 @@
 FROM diepnt/ubuntu14
 
 # Install keystone
-ADD hosts /etc/hosts
 ADD script /tmp/script
 ADD keystone.conf/etc/keystone/keystone.conf
   RUN \
