@@ -7,7 +7,7 @@ FROM diepnt/ubuntu14
 
 # Install keystone
   RUN \
-  #apt-get update && \
+  apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y nova-api nova-cert nova-conductor nova-consoleauth nova-novncproxy nova-scheduler python-novaclient supervisor && \
   sed -i '17i[program:nova-api]' /etc/supervisor/supervisord.conf && \
   sed -i '18icommand=/usr/bin/nova-api' /etc/supervisor/supervisord.conf && \
@@ -30,7 +30,7 @@ RUN \
   supervisorctl restart nova-consoleauth && \
   supervisorctl restart nova-scheduler && \
   supervisorctl restart nova-conductor &&\
-  supervisorctl restart nova-novncproxy && \
+  supervisorctl restart nova-novncproxy 
 
 # Define working directory.
 WORKDIR /root
