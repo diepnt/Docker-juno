@@ -20,5 +20,6 @@ Sau khi build edit file hosts trỏ tới proxy
 
 Glance
 ====
+Sau khi build edit file hosts trỏ tới proxy
 
 10.2.100.17         proxy
