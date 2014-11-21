@@ -1,0 +1,3 @@
+a2enmod wsgi
+a2enconf openstack-dashboard
+service apache2 restart
