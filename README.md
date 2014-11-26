@@ -42,7 +42,7 @@ Note
 
 đối với nova service cần thêm option --privileged=true khi run
 
-Docker build -t glance Docker-junu/Nova
+Docker build -t nova Docker-juno/Nova
 
 Docker run -i -t --privileged=true --name nova -h nova -p 10.2.100.4:8774:8774 nova bash
 
