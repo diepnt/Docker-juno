@@ -36,3 +36,15 @@ Sau khi build edit file hosts trỏ tới proxy
 
 Các service khác tương tự.
 ====
+
+Note
+===
+
+đối với nova service cần thêm option --privileged=true khi run
+
+Docker build -t glance Docker-junu/Nova
+
+Docker run -i -t --privileged=true --name nova -h nova -p 10.2.100.4:8774:8774 nova bash
+
+lý do: nova-api sẽ ko start được khi không save iptable-rule
+
