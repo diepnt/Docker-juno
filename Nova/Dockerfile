@@ -15,11 +15,11 @@ FROM diepnt/ubuntu14
   sed -i '20icommand=/usr/bin/nova-cert' /etc/supervisor/supervisord.conf && \
   sed -i '21i[program:nova-consoleauth]' /etc/supervisor/supervisord.conf && \
   sed -i '22icommand=/usr/bin/nova-consoleauth' /etc/supervisor/supervisord.conf && \
-  sed -i '23i[program:scheduler]' /etc/supervisor/supervisord.conf && \
+  sed -i '23i[program:nova-scheduler]' /etc/supervisor/supervisord.conf && \
   sed -i '24icommand=/usr/bin/nova-scheduler' /etc/supervisor/supervisord.conf && \
   sed -i '25i[program:nova-conductor]' /etc/supervisor/supervisord.conf && \
   sed -i '26icommand=/usr/bin/nova-conductor' /etc/supervisor/supervisord.conf && \
-  sed -i '27i[program:novncproxy]' /etc/supervisor/supervisord.conf && \
+  sed -i '27i[program:nova-novncproxy]' /etc/supervisor/supervisord.conf && \
   sed -i '28icommand=/usr/bin/nova-novncproxy' /etc/supervisor/supervisord.conf && \
   rm /var/lib/nova/nova.sqlite && \
   /etc/init.d/supervisor start
