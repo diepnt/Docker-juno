@@ -13,6 +13,10 @@ ADD script /tmp/script
   sed -i '18icommand=/usr/bin/glance-api' /etc/supervisor/supervisord.conf && \
   sed -i '19i[program:glance-registry]' /etc/supervisor/supervisord.conf && \
   sed -i '20icommand=/usr/bin/glance-registry' /etc/supervisor/supervisord.conf  && \
+  sed -i '21i[inet_http_server]' /etc/supervisor/supervisord.conf  && \  /etc/supervisor/supervisord.conf  && \
+  sed -i '22iport = :9001'  /etc/supervisor/supervisord.conf  && \
+  sed -i '23iusername = loki' /etc/supervisor/supervisord.conf  && \
+  sed -i '24ipassword =  kilo'  /etc/supervisor/supervisord.conf  && \
   service supervisor start
 ADD glance-api.conf /etc/glance/glance-api.conf
 ADD glance-registry.conf /etc/glance/glance-registry.conf
