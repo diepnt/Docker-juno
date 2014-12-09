@@ -38,4 +38,4 @@ WORKDIR /root
 # Define default command.
 CMD ["/usr/bin/supervisord", "-n"]
 # Expose ports.
-EXPOSE 8774
+EXPOSE 8774 8775 6080
